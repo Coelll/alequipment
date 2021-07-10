@@ -52,10 +52,16 @@ def startcommand(update:Update, context: CallbackContext) -> None:
             reply_markup=reply_buttons
             )
 
+# So, my guess about this chunk of code is either we have buttons, user
+# clicks on particular one and then gets info about coresponding equip
+# or he clicks the equip type from prev menu and then enters the name of
+# the equip into the chat message like - "@alequipment_bot type94"
+# Or we scrap the shitty button idea and communicate with our bot
+# only through inline chat messages
 def button_press(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     if query.data == 'list_of_cargo':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -118,7 +124,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
         ))
 
     elif query.data == 'list_of_AA_guns':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -126,7 +132,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'ASW':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -134,7 +140,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'AUX':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -142,7 +148,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'BB':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -150,7 +156,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'DD':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -158,7 +164,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'DiveB':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -166,7 +172,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'Fighters':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -174,7 +180,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'CA_guns':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -182,7 +188,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'CL_guns':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -190,7 +196,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'LC_guns':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -198,7 +204,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'Seaplanes':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -206,7 +212,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'SUB':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -214,7 +220,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'TorpBomb':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -222,7 +228,7 @@ def button_press(update: Update, context: CallbackContext) -> None:
             ]
         ))
     elif query.data == 'Torps':
-        query.edit_message_text(text=f'So, you are interested in {query.data}, here it is.')
+        query.edit_message_text(text=f'You chose {query.data}, if you want to get to the previous menu, press "back"')
         query.edit_message_reply_markup(InlineKeyboardMarkup
         (
             [
@@ -234,7 +240,13 @@ def button_press(update: Update, context: CallbackContext) -> None:
 def helpcommand(update:Update, context: CallbackContext) -> None:
     update.message.reply_text('Here is a list of all available commands:\n '
                               '/start - start the bot\n'
-                              '/help - get all available commands\n')
+                              '/help - get all available commands\n'
+                              '/update - get new equip from the tables\n')
+
+# function that acquires new equipment from the tables
+# so that I don't have to add it manually
+def updatecommand(update:Update, context: CallbackContext) -> None:
+    update.message.reply_text('This feature is not ready YET')
 
 # function to handle errors occured in the dispatcher
 def errormsg(update:Update, context: CallbackContext) -> None:
@@ -242,6 +254,8 @@ def errormsg(update:Update, context: CallbackContext) -> None:
 
 
 # function to handle normal text
+# bot receives the message '@alequipment_bot name of the equip'
+# and then gives equip info to the user
 def text(update:Update, context: CallbackContext) -> None:
     text_received = update.message.text
     update.message.reply_text(f'I am only working with commands and not your "{text_received}".')
@@ -256,6 +270,7 @@ def main():
     # add handlers for start and help commands
     dispatcher.add_handler(CommandHandler("start", startcommand))
     dispatcher.add_handler(CommandHandler("help", helpcommand))
+    dispatcher.add_handler(CommandHandler("update", updatecommand))
     dispatcher.add_handler(CallbackQueryHandler(button_press))
 
     # add an handler for normal text (not commands)
